@@ -49,6 +49,7 @@ public class Point {
         return newpoint;
 
     }
+    //distance function
     public double distanceSquared(Point p2){
         double x = p2.dpoint.d1-this.dpoint.d1;
         double y = p2.dpoint.d2-this.dpoint.d2;
