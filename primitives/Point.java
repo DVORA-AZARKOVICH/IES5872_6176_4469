@@ -40,7 +40,7 @@ public class Point {
         Vector newVector = new Vector(x,y,z);
         return newVector;
     }
-
+    //add function
     public 	Point add (Point p2){
         double x = p2.dpoint.d1+this.dpoint.d1;
         double y = p2.dpoint.d2+this.dpoint.d2;
