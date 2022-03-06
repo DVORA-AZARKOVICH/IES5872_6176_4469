@@ -22,11 +22,24 @@ public class Point {
         }*/
     @Override
     public boolean equals(Object obj) {
-        if (this == obj) return true;
-        if (obj == null) return false;
-        if (!(obj instanceof Point)) return false;
-        Point other = (Point)obj;
-        return (this.dpoint == other.dpoint);
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        Point other = (Point) obj;
+        if (dpoint== null) {
+            if (other!= null)
+                return false;
+        }
+        else if (dpoint.d1!=other.dpoint.d1)
+            return false;
+        else if (dpoint.d2!=other.dpoint.d2)
+            return false;
+        else if (dpoint.d3!=other.dpoint.d3)
+            return false;
+        return true;
     }
     @Override
     public String toString(){

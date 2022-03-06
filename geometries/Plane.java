@@ -10,29 +10,58 @@ public class Plane implements Geometry {
     Vector normal;
 
 
+    /*************** ctors *****************/
+    /**
+     * ctor that gets 2 parameters
+     * @param q2
+     * @param normal2
+     */
 
     public Plane(Vector normal2,Point q2) {
         this.normal = normal2;
         this.q0 = q2;
     }
+    /**
+     * ctor that gets 3 points
+     * @param p1
+     * @param p2
+     * @param p3
+     */
     public Plane(Point p1,Point p2,Point p3) {
         this.q0 = p1;
         Vector v1 = (p2.subtract(p3));
         Vector v2 = (p1.subtract(p3));
         this.normal = v1.crossProduct(v2).normalize();
     }
-
+    /*************** get *****************/
+    /**
+     * @return q0 of the plane
+     */
     public Point GetQ0() {
         return q0;
     }
+
+    /**
+     * @param p
+     * @return the normal vector
+     */
+
+    @Override
+    public Vector getNormal(Point p) {
+        /*return new Vector(p.add(normal));*/
+        return normal;
+    }
+
+    /*************** normalize *****************/
+    /**
+     * @return the normal vector
+     */
+
     public Vector getNormal() {
         return normal;
     }
 
-    @Override
-    public Vector getNormal(Point p) {
-        return null;
-    }
+
     @Override
     public String toString() {
         return "Plane [q0=" + q0 + ", normal=" + normal + "]";
