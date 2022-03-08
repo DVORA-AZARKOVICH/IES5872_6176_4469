@@ -2,6 +2,7 @@ package primitives;
 
 import static primitives.Util.isZero;
 //point class
+//fuhh
 public class Point {
     public final Double3 dpoint;
     public Point(double d1,double d2,double d3)
