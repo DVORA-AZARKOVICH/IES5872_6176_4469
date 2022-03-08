@@ -11,9 +11,14 @@ public class Vector extends Point
      */
     public Vector(double d1,double d2,double d3){
         super(d1,d2,d3);
-        if(this.equals(this.dpoint.ZERO))
+        if(Double3.ZERO.equals(new Double3(d1,d2,d3)))
             throw new IllegalArgumentException("Can't create the zero vector");
     }	/*************** get *****************/
+    public Vector(Double3 d) {
+        super(d);
+        if(Double3.ZERO.equals(d))
+            throw new IllegalArgumentException("Can't create the zero vector");
+    }
 
     /**
      * subtract the wanted vector from it's head
