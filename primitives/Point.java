@@ -42,7 +42,7 @@ public class Point {
     public String toString(){
         return String.format("Point: "+ dpoint.toString());
     }
-
+    //substrucing
     public Vector subtract(Point p2){
         double x = this.dpoint.d1-p2.dpoint.d1;
         double y = this.dpoint.d2-p2.dpoint.d2;
